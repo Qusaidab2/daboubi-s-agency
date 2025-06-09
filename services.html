@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daboubi - Services</title>
+  <style>
+    body { font-family: Arial; background: #fff; color: #000; margin: 0; }
+    header, footer { background: #000; color: #ffd700; text-align: center; padding: 20px; }
+    .section { padding: 40px; text-align: center; }
+    form input, form textarea { width: 80%; padding: 10px; margin: 10px auto; display: block; }
+    .plan { border: 1px solid #ccc; margin: 20px; padding: 20px; }
+    .social-icons img { height: 30px; margin: 0 10px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daboubi Services</h1>
+    <div class="social-icons">
+      <img src="instagram-icon.png" alt="Instagram">
+      <img src="gmail-icon.png" alt="Gmail">
+    </div>
+  </header>
+
+  <section class="section">
+    <h2>We trust you with choosing your plan and you trust us with making it work for you</h2>
+
+    <div class="plan">
+      <h3>Plan 1 – Free for 1 Month</h3>
+      <form action="mailto:daboubi.yo@gmail.com" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="description" placeholder="What do you want?" required></textarea>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <div class="plan">
+      <h3>Plan 2 – $48 for 3 Months (Discounted from $89.99)</h3>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="dabadibo.tttt@gmail.com">
+        <input type="hidden" name="item_name" value="Daboubi Plan 2 - 3 Months">
+        <input type="hidden" name="amount" value="48.00">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="description" placeholder="What do you want?" required></textarea>
+        <input type="submit" value="Pay and Submit" />
+      </form>
+    </div>
+
+    <div class="plan">
+      <h3>Plan 3 – $250 for 1 Year + Special Gift</h3>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="dabadibo.tttt@gmail.com">
+        <input type="hidden" name="item_name" value="Daboubi Plan 3 - 1 Year">
+        <input type="hidden" name="amount" value="250.00">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="description" placeholder="What do you want?" required></textarea>
+        <input type="submit" value="Pay and Submit" />
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Daboubi. All rights reserved.</p>
+  </footer>
+</body>
+</html>
