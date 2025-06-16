@@ -12,7 +12,7 @@
 .carousel {
   position: absolute;
   top: 11%;   /* adjust to position inside the phone screen */
-  left: 69%;
+  left: 65%;
   width: 82%;
   height: 78%;
   overflow: hidden;
