@@ -1,51 +1,71 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
 .phone-container {
   position: relative;
-  width: 300px; /* Adjust based on your iPhone image size */
-  margin: auto;
+  width: 300px;
+  height: auto;
 }
 
 .phone-frame {
-  width: 120%;
+  width: 100%;
+  height: auto;
   display: block;
+  z-index: 1;
 }
 
 .carousel {
   position: absolute;
-  top: 10%;  /* adjust this based on your phone image */
-  left: 15%;
-  width: 80%;
-  height: 80%;
+  top: 12.5%;
+  left: 7.5%;
+  width: 85%;
+  height: 75%;
   overflow: hidden;
-  border-radius: 25px; /* optional: soften edges */
+  z-index: 2;
+  border-radius: 20px;
 }
 
 .carousel-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  border-radius: 20px;
 }
 
 .carousel-image.active {
-  opacity: 1;
+  display: block;
 }
 
 button.prev, button.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
   border: none;
   font-size: 24px;
+  padding: 5px 10px;
   cursor: pointer;
-  padding: 5px;
+  z-index: 3;
   border-radius: 50%;
-  z-index: 10;
 }
 
-button.prev { left: 10px; }
-button.next { right: 10px; }
+button.prev {
+  left: 5px;
+}
+
+button.next {
+  right: 5px;
+}
+
