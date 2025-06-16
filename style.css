@@ -1,11 +1,17 @@
+/* Leave your global body styles alone */
 body {
   margin: 0;
   padding: 0;
   background-color: #111;
+  font-family: sans-serif;
+}
+
+/* This ONLY centers the phone section */
+.phone-showcase {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  padding: 60px 0; /* Adjust spacing */
 }
 
 .phone-container {
@@ -68,4 +74,3 @@ button.prev {
 button.next {
   right: 5px;
 }
-
