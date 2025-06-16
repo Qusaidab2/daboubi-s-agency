@@ -23,7 +23,7 @@ body {
 .phone-frame {
   width: 100%;
   height: auto;
-  display: block;
+  display: on;
   z-index: 1;
 }
 
