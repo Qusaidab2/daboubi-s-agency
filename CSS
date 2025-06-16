@@ -1,3 +1,15 @@
+.carousel {
+  position: absolute;
+  top: 13%; /* adjust this to align vertically with phone screen */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75%;
+  height: 73%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .phone-container {
   position: relative;
   width: 300px;
