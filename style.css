@@ -11,12 +11,12 @@
 
 .carousel {
   position: absolute;
-  top: 10%;  /* adjust this based on your phone image */
+  top: 8%;  /* adjust this based on your phone image */
   left: 10%;
   width: 80%;
   height: 80%;
   overflow: hidden;
-  border-radius: 30px; /* optional: soften edges */
+  border-radius: 25px; /* optional: soften edges */
 }
 
 .carousel-image {
