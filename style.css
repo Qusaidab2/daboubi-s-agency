@@ -5,16 +5,16 @@
 }
 
 .phone-frame {
-  width: 150%;
+  width: 200%;
   display: block;
 }
 
 .carousel {
   position: absolute;
   top: 6%;  /* adjust this based on your phone image */
-  left: 10%;
-  width: 80%;
-  height: 80%;
+  left: 15%;
+  width: 70%;
+  height: 70%;
   overflow: hidden;
   border-radius: 25px; /* optional: soften edges */
 }
