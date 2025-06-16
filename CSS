@@ -1,0 +1,53 @@
+.phone-wrapper {
+  position: relative;
+  width: 300px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.phone-frame {
+  width: 100%;
+  display: block;
+  z-index: 1;
+  position: relative;
+}
+
+.slider {
+  position: absolute;
+  top: 13%;
+  left: 9%;
+  width: 82%;
+  height: 76%;
+  overflow: hidden;
+  z-index: 2;
+  border-radius: 20px;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+  display: block;
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+button.prev { left: 5px; }
+button.next { right: 5px; }
