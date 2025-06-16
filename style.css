@@ -1,11 +1,11 @@
 .phone-container {
   position: relative;
-  width: 500px; /* set to match your phone image size */
+  width: 500px; /* set to be smaller than your phone image size */
   margin: 0 auto;
 }
 
 .phone-frame {
-  width: 100%;
+  width: 200%;
   display: block;
 }
 
