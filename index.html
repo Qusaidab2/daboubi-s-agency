@@ -81,95 +81,47 @@
   </section>
 
 
-<div class="phone-wrapper">
-  <img src="/assets/iphone15.png" class="phone-frame" />
-  <div class="slider">
-    <img src="/assets/pic1.jpg" class="slide active" />
-    <img src="/assets/pic2.jpg" class="slide" />
-    <img src="/assets/pic3.jpg" class="slide" />
-    <button class="prev" onclick="prevSlide()">←</button>
-    <button class="next" onclick="nextSlide()">→</button>
-  </div>
-</div>
-  
-<style>
 
-.phone-wrapper {
-  position: relative;
-  width: 300px;
-  margin: auto;
-  margin-top: 40px;
+  <img
+  src="/assets/iphone15.png"
+  alt="Phone frame"
+  className="w-[300px] mx-auto"
+/>
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
+
+export default function PhoneGallery() {
+  const images = [
+    "/assets/pic1.jpg",
+    "/assets/pic2.jpg",
+    "/assets/pic3.jpg"
+  ]
+
+  return (
+    <div className="relative w-[300px] mx-auto">
+      <img
+        src="/assets/iphone15.png"
+        alt="Phone Frame"
+        className="w-full z-10 relative"
+      />
+      <div className="absolute top-[14%] left-[11%] w-[78%] h-[73%] z-0 overflow-hidden rounded-xl">
+        <Swiper spaceBetween={0} slidesPerView={1}>
+          {images.map((src, index) => (
+            <SwiperSlide key={index}>
+              <img
+                src={src}
+                alt={`Slide ${index}`}
+                className="w-full h-full object-cover"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </div>
+  )
 }
 
-.phone-frame {
-  width: 100%;
-  display: block;
-  z-index: 1;
-  position: relative;
-}
 
-.slider {
-  position: absolute;
-  top: 13%;
-  left: 9%;
-  width: 82%;
-  height: 76%;
-  overflow: hidden;
-  z-index: 2;
-  border-radius: 20px;
-}
-
-.slide {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: none;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.slide.active {
-  display: block;
-}
-
-button.prev,
-button.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 3;
-  background: rgba(255, 255, 255, 0.7);
-  border: none;
-  padding: 4px 10px;
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 5px;
-}
-
-button.prev { left: 5px; }
-button.next { right: 5px; }
-
-  
-<script>
-  let currentSlide = 0;
-  const slides = document.querySelectorAll(".slide");
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.remove("active");
-      if (i === index) slide.classList.add("active");
-    });
-  }
-
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }
-
-  function prevSlide() {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-  }
-</script>
 
   
   
