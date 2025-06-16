@@ -1,6 +1,6 @@
 .phone-container {
   position: relative;
-  width: 500px; /* set to be smaller than your phone image size */
+  width: 400px; /* set to be smaller than your phone image size */
   margin: 0 auto;
 }
 
