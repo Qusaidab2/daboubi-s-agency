@@ -82,11 +82,16 @@
 
 
 
-  <img
-  src="/assets/iphone15.png"
-  alt="Phone frame"
-  className="w-[300px] mx-auto"
-/>
+  <div class="phone-wrapper">
+  <img src="/assets/iphone15.png" class="phone-frame" />
+  <div class="slider">
+    <img src="/assets/pic1.jpg" class="slide active" />
+    <img src="/assets/pic2.jpg" class="slide" />
+    <img src="/assets/pic3.jpg" class="slide" />
+    <button class="prev" onclick="prevSlide()">←</button>
+    <button class="next" onclick="nextSlide()">→</button>
+  </div>
+</div>
 
  
   
