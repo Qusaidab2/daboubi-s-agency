@@ -1,41 +1,33 @@
-/* Leave your global body styles alone */
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #111;
-  font-family: sans-serif;
-}
-
-/* This ONLY centers the phone section */
 .phone-showcase {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 60px 0; /* Adjust spacing */
+  padding: 60px 0;
 }
 
 .phone-container {
   position: relative;
-  width: 300px;
+  width: 300px; /* adjust as needed */
   height: auto;
 }
 
 .phone-frame {
   width: 100%;
   height: auto;
-  display: on;
+  display: block;
   z-index: 1;
 }
 
+/* Fine-tuned placement to match the screen inside the white iPhone image */
 .carousel {
   position: absolute;
-  top: 12.5%;
-  left: 7.5%;
-  width: 85%;
-  height: 75%;
+  top: 13.5%;     /* Moved slightly down */
+  left: 9.2%;     /* Moved slightly right */
+  width: 81%;     /* Slightly narrower */
+  height: 73.5%;  /* Slightly shorter */
   overflow: hidden;
   z-index: 2;
-  border-radius: 20px;
+  border-radius: 25px;
 }
 
 .carousel-image {
@@ -46,7 +38,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: 20px;
+  border-radius: 25px;
 }
 
 .carousel-image.active {
@@ -74,3 +66,4 @@ button.prev {
 button.next {
   right: 5px;
 }
+
