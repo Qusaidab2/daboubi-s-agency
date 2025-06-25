@@ -66,34 +66,3 @@ button.prev {
 button.next {
   right: 5px;
 }
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --gold: #FFD700;
-}
-
-.text-gold {
-  color: var(--gold);
-}
-
-.border-gold {
-  border-color: var(--gold);
-}
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --gold: #FFD700;
-}
-
-.text-gold {
-  color: var(--gold);
-}
-
-.border-gold {
-  border-color: var(--gold);
-}
-
