@@ -81,3 +81,10 @@ button.next {
 .border-gold {
   border-color: var(--gold);
 }
+.text-gold {
+  color: #FFD700;
+}
+
+.bg-gold {
+  background-color: #FFD700;
+}
