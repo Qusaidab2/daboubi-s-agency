@@ -81,4 +81,19 @@ button.next {
 .border-gold {
   border-color: var(--gold);
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gold: #FFD700;
+}
+
+.text-gold {
+  color: var(--gold);
+}
+
+.border-gold {
+  border-color: var(--gold);
+}
 
