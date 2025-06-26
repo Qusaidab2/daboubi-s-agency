@@ -74,5 +74,27 @@
   <footer>
     <p>&copy; 2025 Daboubi. All rights reserved.</p>
   </footer>
+  <!-- Load EmailJS SDK -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  // Initialize EmailJS with your public key
+  (function() {
+    emailjs.init("SS0RM2MIqx7SqngAN");
+  })();
+
+  // Handle form submission
+  document.getElementById("services-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_s9vsc3t", "templates_so48slm", this)
+      .then(function() {
+        alert("Thank you! Your message has been sent.");
+      }, function(error) {
+        alert("Oops, something went wrong. Please try again.");
+        console.log(error);
+      });
+  });
+</script>
+
 </body>
 </html>
