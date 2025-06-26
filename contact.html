@@ -2,39 +2,71 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Daboubi - Contact</title>
   <style>
-    body { font-family: Arial; background: #fff; color: #000; margin: 0; }
-    header, footer { background: #000; color: #ffd700; text-align: center; padding: 20px; }
-    .section { padding: 40px; text-align: center; }
-    form input, form textarea { width: 80%; padding: 10px; margin: 10px auto; display: block; }
-    .social-icons img { height: 30px; margin: 0 10px; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #000;
+      margin: 0;
+    }
+    header, footer {
+      background: #000;
+      color: #ffd700;
+      text-align: center;
+      padding: 20px;
+    }
+    .section {
+      padding: 40px;
+      text-align: center;
+      max-width: 600px;
+      margin: auto;
+    }
+    form input, form textarea {
+      width: 80%;
+      padding: 10px;
+      margin: 10px auto;
+      display: block;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    input[type="submit"] {
+      background-color: #000;
+      color: #ffd700;
+      border: none;
+      cursor: pointer;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+    input[type="submit"]:hover {
+      background-color: #333;
+    }
+    .social-icons img {
+      height: 30px;
+      margin: 0 10px;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Contact Daboubi</h1>
-    <div class="social-icons"><a href="https://www.instagram.com/official_daboubi_45/" target="_blank">
-  <img src="icons/instagram.png" alt="Instagram" width="30">
-</a>
-<a href="mailto:daboubi.yo@gmail.com">
-  <img src="icons/gmail.png" alt="Gmail" width="30">
-</a>
-
-     <a href="https://www.instagram.com/official_daboubi_45/" target="_blank">
-  <img src="icons/instagram.png" alt="Instagram" width="30">
-</a>
-<a href="mailto:daboubi.yo@gmail.com">
-  <img src="icons/gmail.png" alt="Gmail" width="30">
-</a>
-
+    <div class="social-icons">
+      <a href="https://www.instagram.com/official_daboubi_45/" target="_blank" rel="noopener noreferrer">
+        <img src="icons/instagram.png" alt="Instagram" />
+      </a>
+      <a href="mailto:daboubi.yo@gmail.com">
+        <img src="icons/gmail.png" alt="Gmail" />
+      </a>
     </div>
   </header>
 
   <section class="section">
-    <h2>"We would absolutely love to hear from you"</h2>
-    <form action="mailto:daboubi.yo@gmail.com" method="POST">
+    <h2>We would absolutely love to hear from you</h2>
+
+    <form id="contact-form">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" placeholder="Your Message" required></textarea>
@@ -45,5 +77,27 @@
   <footer>
     <p>&copy; 2025 Daboubi. All rights reserved.</p>
   </footer>
+
+  <!-- EmailJS integration -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("SS0RM2MIqx7SqngAN"); // Your Public Key
+    })();
+
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm('service_s9vsc3t', 'templates_so48slm', this)
+        .then(function() {
+          alert('Thank you! Your message has been sent.');
+          document.getElementById('contact-form').reset();
+        }, function(error) {
+          alert('Oops! Something went wrong, please try again.');
+          console.error('EmailJS error:', error);
+        });
+    });
+  </script>
 </body>
 </html>
+
