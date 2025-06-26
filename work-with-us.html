@@ -39,7 +39,7 @@
   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script type="text/javascript">
   (function(){
-    emailjs.init("SS0RM2MIqx7SqngAN"); // replace with your public key
+    emailjs.init("SS0RM2MIqx7SqngAN"); //
   })();
 </script>
 
@@ -54,7 +54,8 @@
 
   <section class="form-section">
     <h2 class="text-2xl gold-text font-semibold text-center mb-4">"Here's how it works: If you refer someone to Daboubi, and they buy one of the 3 plans, you get 50% of the money."</h2>
-    <form class="bg-gray-900 p-6 rounded-lg max-w-xl mx-auto" method="post" action="https://formspree.io/f/YOUR_FORM_ID">
+    <form class="bg-gray-900 p-6 rounded-lg max-w-xl mx-auto" method="post" action="<form id="commission-form">
+">
       <div class="form-group">
         <label for="name">Full Name</label>
         <input type="text" id="name" name="name" required />
@@ -103,6 +104,19 @@
   <footer class="mt-16 text-center text-gray-500 text-sm">
     © 2025 Daboubi Marketing Agency. All rights reserved.
   </footer>
+<script>
+document.getElementById("commission-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+    .then(function() {
+      alert("Thank you! We got your application.");
+    }, function(error) {
+      alert("Something went wrong. Please try again.");
+      console.log(error);
+    });
+});
+</script>
 
 </body>
 </html>
