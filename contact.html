@@ -88,7 +88,7 @@
     document.getElementById('contact-form').addEventListener('submit', function(event) {
       event.preventDefault();
 
-      emailjs.sendForm('service_s9vsc3t', 'templates_so48slm', this)
+      emailjs.sendForm('service_s9vsc3t', 'template_so48slm', this)
         .then(function() {
           alert('Thank you! Your message has been sent.');
           document.getElementById('contact-form').reset();
