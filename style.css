@@ -85,20 +85,6 @@ button.next {
   color: #FFD700;
 }
 
-.hero-section {
-  height: 100vh;
-  background-image: url(/assets/smoke.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
 
-.mid-section {
-.mid-section {
-  height: 500px;
-  background-image: url(/assets/war-room.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
