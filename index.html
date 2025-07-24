@@ -84,6 +84,46 @@
       background: linear-gradient(135deg, #E6C200, #FFD700);
       transform: scale(1.05);
     }
+
+    .portfolio-button-section {
+      display: flex;
+      justify-content: center;
+      margin: 4rem 0;
+    }
+
+    .portfolio-button {
+      background-color: #FFD700;
+      color: black;
+      font-weight: bold;
+      font-size: 1.25rem;
+      padding: 1rem 2.5rem;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 6px 12px rgba(255, 215, 0, 0.5);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      user-select: none;
+    }
+
+    .portfolio-button:hover {
+      background-color: #e6c200;
+      transform: scale(1.05);
+    }
+
+    .section.testimonials {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .section.testimonials form input,
+    .section.testimonials form textarea {
+      width: 80%;
+      padding: 10px;
+      margin: 10px auto;
+      display: block;
+      box-sizing: border-box;
+    }
   </style>
 </head>
 <body>
@@ -110,36 +150,14 @@
     </a>
   </section>
 
-</body>
-</html>
-<html>
-<body>
-
   <!-- Portfolio Button -->
-  <section style="display: flex; justify-content: center; margin: 4rem 0;">
-    <a href="portfolio.html" target="_blank" style="
-      background-color: #FFD700;
-      color: black;
-      font-weight: bold;
-      font-size: 1.25rem;
-      padding: 1rem 2.5rem;
-      border-radius: 12px;
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-      box-shadow: 0 6px 12px rgba(255, 215, 0, 0.5);
-      transition: background-color 0.3s ease, transform 0.3s ease;
-      user-select: none;
-    "
-    onmouseover="this.style.backgroundColor='#e6c200'; this.style.transform='scale(1.05)';"
-    onmouseout="this.style.backgroundColor='#FFD700'; this.style.transform='scale(1)';">
+  <section class="portfolio-button-section">
+    <a href="portfolio.html" target="_blank" class="portfolio-button">
       Join the Vision — See Our Portfolio
     </a>
   </section>
 
-  <!-- Your other sections -->
-  <!-- ...Hero Paragraph, Features, Testimonials, Footer, etc. remain unchanged... -->
-
+  <!-- Testimonials Section -->
   <section class="section testimonials">
     <h2>Customer Experience</h2>
     <form action="mailto:daboubi.yo@gmail.com" method="POST">
