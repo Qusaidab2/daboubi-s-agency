@@ -3,21 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daboubi Agency</title>
+  <title>Daboubi - Home</title>
+  <link rel="stylesheet" href="style.css" />
+
   <style>
-    body, html {
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #000;
       margin: 0;
-      padding: 0;
-      font-family: sans-serif;
     }
 
-    .hero-section {
-      height: 100vh;
+    header, footer {
+      background-color: #000;
+      color: #ffd700;
+      text-align: center;
+      padding: 20px;
       position: relative;
       overflow: hidden;
     }
 
-    .hero-section::before {
+    header::before {
       content: "";
       position: absolute;
       inset: 0;
@@ -25,26 +31,41 @@
       background-size: cover;
       background-position: center;
       opacity: 0.08;
+      z-index: 0;
+    }
+
+    header * {
+      position: relative;
       z-index: 1;
     }
 
-    .hero-section > * {
-      position: relative;
-      z-index: 2;
+    .section {
+      padding: 40px;
+      text-align: center;
     }
 
-    .mid-section {
-      height: 400px;
-      background-color: #f8f8f8;
+    .gallery img {
+      width: 200px;
+      margin: 10px;
     }
 
-    .warroom-shadow {
-      height: 500px;
+    .testimonials {
+      margin-top: 40px;
+    }
+
+    form input, form textarea {
+      width: 80%;
+      padding: 10px;
+      margin: 10px auto;
+      display: block;
+    }
+
+    .blog-wrapper {
       position: relative;
       overflow: hidden;
     }
 
-    .warroom-shadow::before {
+    .blog-wrapper::before {
       content: "";
       position: absolute;
       inset: 0;
@@ -52,21 +73,81 @@
       background-size: cover;
       background-position: center;
       opacity: 0.08;
+      z-index: 0;
+    }
+
+    .blog-wrapper * {
+      position: relative;
       z-index: 1;
     }
+  </style>
 
-    .warroom-shadow > * {
-      position: relative;
-      z-index: 2;
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "s9rf7t4r5d");
+  </script>
+</head>
+
+<body>
+  <header>
+    <div style="display: flex; align-items: center;">
+      <img src="logo.png.png" height="250" style="margin-right: 15px;" />
+    </div>
+    <h1>Daboubi</h1>
+    <nav>
+      <a href="services.html" target="_blank" style="color: #ffd700;">Services</a>
+      <a href="contact.html" target="_blank" style="color: #ffd700;">Contact</a>
+    </nav>
+  </header>
+
+  <section class="section">
+    <h2>How We Help You Succeed</h2>
+    <div>
+      <li>You tell us what you want to achieve</li>
+      <li>We create a tailored marketing strategy</li>
+      <li>You become successful</li>
+    </div>
+  </section>
+
+  <section>
+    <li>
+      <a href="daboubi_case_study.html" target="_blank" class="case-study-btn">Case Study</a>
+    </li>
+  </section>
+
+  <style>
+    .case-study-btn {
+      display: block;
+      text-align: center;
+      font-size: 1.4em;
+      padding: 16px 24px;
+      background-color: #ffd700;
+      color: #111;
+      border-radius: 12px;
+      margin: 100px auto;
+      width: 200px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
     }
 
-    .blog-button-section {
-      display: flex;
-      justify-content: center;
-      margin: 4rem 0;
+    .case-study-btn:hover {
+      background-color: #f5c518;
+      color: #000;
     }
+  </style>
 
-    .blog-button {
+  <section class="section">
+    <blockquote><em>"Believe in your future that it begins now."</em></blockquote>
+    <blockquote><em>"We rise by lifting others."</em></blockquote>
+  </section>
+
+  <!-- Blog Button with war-room shadow -->
+  <section class="blog-wrapper" style="display: flex; justify-content: center; margin: 4rem 0;">
+    <a href="blog.html" target="_blank" style="
       background: linear-gradient(135deg, #FFD700, #E6C200);
       color: black;
       font-weight: 700;
@@ -78,20 +159,16 @@
       letter-spacing: 1.1px;
       transition: background 0.3s ease, transform 0.2s ease;
       user-select: none;
-    }
+    "
+    onmouseover="this.style.background='linear-gradient(135deg, #E6C200, #FFD700)'; this.style.transform='scale(1.05)';"
+    onmouseout="this.style.background='linear-gradient(135deg, #FFD700, #E6C200)'; this.style.transform='scale(1)';">
+      Explore Our Blog & Marketing Tips
+    </a>
+  </section>
 
-    .blog-button:hover {
-      background: linear-gradient(135deg, #E6C200, #FFD700);
-      transform: scale(1.05);
-    }
-
-    .portfolio-button-section {
-      display: flex;
-      justify-content: center;
-      margin: 4rem 0;
-    }
-
-    .portfolio-button {
+  <!-- Portfolio Button -->
+  <section style="display: flex; justify-content: center; margin: 4rem 0;">
+    <a href="portfolio.html" target="_blank" style="
       background-color: #FFD700;
       color: black;
       font-weight: bold;
@@ -104,60 +181,53 @@
       box-shadow: 0 6px 12px rgba(255, 215, 0, 0.5);
       transition: background-color 0.3s ease, transform 0.3s ease;
       user-select: none;
-    }
-
-    .portfolio-button:hover {
-      background-color: #e6c200;
-      transform: scale(1.05);
-    }
-
-    .section.testimonials {
-      padding: 40px;
-      text-align: center;
-    }
-
-    .section.testimonials form input,
-    .section.testimonials form textarea {
-      width: 80%;
-      padding: 10px;
-      margin: 10px auto;
-      display: block;
-      box-sizing: border-box;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Hero with smoke background -->
-  <section class="hero-section">
-    <!-- You can add content here if needed -->
-  </section>
-
-  <!-- Mid content -->
-  <section class="mid-section">
-    <!-- You can add content here if needed -->
-  </section>
-
-  <!-- War Room background shadow -->
-  <section class="warroom-shadow">
-    <!-- You can add content here if needed -->
-  </section>
-
-  <!-- Blog Button -->
-  <section class="blog-button-section">
-    <a href="blog.html" target="_blank" class="blog-button">
-      Explore Our Blog & Marketing Tips
-    </a>
-  </section>
-
-  <!-- Portfolio Button -->
-  <section class="portfolio-button-section">
-    <a href="portfolio.html" target="_blank" class="portfolio-button">
+    "
+    onmouseover="this.style.backgroundColor='#e6c200'; this.style.transform='scale(1.05)';"
+    onmouseout="this.style.backgroundColor='#FFD700'; this.style.transform='scale(1)';">
       Join the Vision — See Our Portfolio
     </a>
   </section>
 
-  <!-- Testimonials Section -->
+  <!-- Hero Paragraph -->
+  <section class="h-screen bg-black flex items-center justify-center px-4">
+    <div class="text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-gold mb-4">Why Choose Daboubi?</h1>
+      <p class="text-white text-lg md:text-xl italic max-w-2xl mx-auto">
+        We don’t just offer services — we deliver transformations. From strategy to execution, we turn your brand into a powerhouse.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="bg-black py-20 px-6 flex justify-center items-center flex-col text-center">
+    <div class="max-w-6xl w-full">
+      <h2 class="text-3xl md:text-4xl font-bold text-gold mb-4">What Makes Us Different?</h2>
+      <p class="text-white text-lg mb-12 italic">These are the values that set us apart.</p>
+      <!-- ... six feature blocks ... -->
+    </div>
+  </section>
+
+  <!-- Work With Us -->
+  <div style="text-align: center; margin: 60px 0;">
+    <a href="work-with-us.html" target="_blank" style="
+      background-color: gold;
+      color: black;
+      font-weight: bold;
+      padding: 16px 32px;
+      text-decoration: none;
+      border-radius: 12px;
+      font-size: 18px;
+      box-shadow: 0 0 10px gold;
+      transition: background 0.3s, transform 0.2s;
+      display: inline-block;
+    "
+    onmouseover="this.style.backgroundColor='#e6c200'; this.style.transform='scale(1.05)'"
+    onmouseout="this.style.backgroundColor='gold'; this.style.transform='scale(1)'">
+      💼 Work With Us
+    </a>
+  </div>
+
+  <!-- Testimonials -->
   <section class="section testimonials">
     <h2>Customer Experience</h2>
     <form action="mailto:daboubi.yo@gmail.com" method="POST">
