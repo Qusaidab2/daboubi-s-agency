@@ -111,9 +111,7 @@ footer {
   color: #FFD700;
   text-align: center;
   padding: 20px;
-  <style>
-
-.services-button-section {
+ .services-button-section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -165,4 +163,4 @@ footer {
   to {
     transform: rotate(360deg);
   }
-  </style>
+}
