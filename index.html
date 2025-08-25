@@ -77,20 +77,41 @@
     }
   </style>
 </head>
-<div id="google_translate_element"></div>
+<div id="google_translate_element" style="display:none;"></div>
 
 <script type="text/javascript">
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
-      pageLanguage: 'en',  // Change this if your site’s main language isn’t English
-      includedLanguages: 'en,ar,ru,fr,de,es,ua,it,zh-CN,ja', // List of languages you want to support
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      pageLanguage: 'en', // your website’s default language
+      autoDisplay: false
     }, 'google_translate_element');
   }
+
+  // Auto-translate based on browser language
+  function autoTranslate() {
+    var userLang = navigator.language || navigator.userLanguage; // e.g. "fr", "ar", "ru"
+    var langCode = userLang.split('-')[0]; // get base language
+
+    // List of supported languages
+    var supported = ['en','ar','ru','fr','de','es','it','zh-CN','ja'];
+
+    if (supported.includes(langCode) && langCode !== 'en') {
+      var select = document.querySelector("select.goog-te-combo");
+      if (select) {
+        select.value = langCode;
+        select.dispatchEvent(new Event("change"));
+      }
+    }
+  }
+
+  window.addEventListener('load', function(){
+    setTimeout(autoTranslate, 2000); // wait for widget to load
+  });
 </script>
 
 <script type="text/javascript" 
   src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
 </script>
   </header>
   <section class="section">
